@@ -10,6 +10,7 @@ def get_output_filename(date):
     return f"transactions_{date.strftime('%Y_%m')}.csv"
 
 def process_transactions(input_file):
+    global results_dir
     # Dictionary to store transactions for each month
     monthly_transactions = {}
 
@@ -27,7 +28,8 @@ def process_transactions(input_file):
 
     # Write transactions to separate files
     for output_file, transactions in monthly_transactions.items():
-        with open(output_file, 'w', newline='') as file:
+        full_output_path = os.path.join(results_dir, output_file)
+        with open(full_output_path, 'w', newline='') as file:
             writer = csv.writer(file, delimiter='\t')
             writer.writerows(transactions)
 
@@ -35,14 +37,19 @@ def process_transactions(input_file):
     print(f"Created {len(monthly_transactions)} output files.")
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python script_name.py <path_to_input_file>")
+    if len(sys.argv) != 3:
+        print("Usage: python script_name.py <path_to_input_file> <path_to_output_directory>")
         sys.exit(1)
     
     input_file = sys.argv[1]
+    results_dir = sys.argv[2]
     
     if not os.path.exists(input_file):
         print(f"Error: The file '{input_file}' does not exist.")
+        sys.exit(1)
+
+    if not os.path.exists(results_dir):
+        print(f"Error: The directory '{results_dir}' does not exist.")
         sys.exit(1)
     
     process_transactions(input_file)
