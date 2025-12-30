@@ -1,0 +1,47 @@
+[
+  {
+    "timestamp": "2025-12-30T13:42:13.420893",
+    "prompt": "What is the best way to make this tool available to a user? I would like to be able to run it in any given directory. ",
+    "length": 118,
+    "session_id": "fab7b65c-9b6a-4044-8243-0cf618f0bc86",
+    "cwd": "/Users/dylan/projects/tx-separator",
+    "project_root": "/Users/dylan/projects/tx-separator",
+    "relative_path": "."
+  },
+  {
+    "timestamp": "2025-12-30T14:33:13.442832",
+    "prompt": "Adapt the script so that it can also process an excel file as input. The excel file has a header row which should be maintained across the split files. ultrathink",
+    "length": 162,
+    "session_id": "fab7b65c-9b6a-4044-8243-0cf618f0bc86",
+    "cwd": "/Users/dylan/projects/tx-separator",
+    "project_root": "/Users/dylan/projects/tx-separator",
+    "relative_path": "."
+  },
+  {
+    "timestamp": "2025-12-30T14:42:54.742386",
+    "prompt": "Error processing transactions: openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format.",
+    "length": 169,
+    "session_id": "fab7b65c-9b6a-4044-8243-0cf618f0bc86",
+    "cwd": "/Users/dylan/projects/tx-separator",
+    "project_root": "/Users/dylan/projects/tx-separator",
+    "relative_path": "."
+  },
+  {
+    "timestamp": "2025-12-30T14:52:46.859576",
+    "prompt": "Set up github actions so that when merged with main, a new downloadable and installable package is created and published.",
+    "length": 121,
+    "session_id": "fab7b65c-9b6a-4044-8243-0cf618f0bc86",
+    "cwd": "/Users/dylan/projects/tx-separator",
+    "project_root": "/Users/dylan/projects/tx-separator",
+    "relative_path": "."
+  },
+  {
+    "timestamp": "2025-12-30T15:00:23.459037",
+    "prompt": "Add a comprehensive description to the repository's description. ",
+    "length": 65,
+    "session_id": "fab7b65c-9b6a-4044-8243-0cf618f0bc86",
+    "cwd": "/Users/dylan/projects/tx-separator",
+    "project_root": "/Users/dylan/projects/tx-separator",
+    "relative_path": "."
+  }
+]
